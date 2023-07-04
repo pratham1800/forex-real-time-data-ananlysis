@@ -1,0 +1,15 @@
+                                                                            commands
+steps:
+1.bin/zookeeper-server-start.sh config/zookeeper.properties
+2.bin/kafka-server-start.sh config/server.properties
+3.python3 producer.py
+4.bin/kafka-console-consumer.sh --topic project3 --bootstrap-server localhost:9092
+                                                   askprice
+1.spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2 /home/pratham/Desktop/usecase2.py
+2.bin/kafka-console-consumer.sh --topic askPriceOutput --bootstrap-server localhost:9092
+                                                   bidprice
+1.spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2 /home/pratham/Desktop/usecase1.py
+2.bin/kafka-console-consumer.sh --topic bidPriceOutput --bootstrap-server localhost:9092
+  
+
+                                
